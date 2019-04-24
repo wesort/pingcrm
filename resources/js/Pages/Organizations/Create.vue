@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: Inertia.remember({
+      form: this.$remember({
         name: null,
         email: null,
         phone: null,
@@ -61,7 +61,7 @@ export default {
         region: null,
         country: null,
         postal_code: null,
-      }),
+      }, 'Organizations/Create'),
     }
   },
   methods: {
